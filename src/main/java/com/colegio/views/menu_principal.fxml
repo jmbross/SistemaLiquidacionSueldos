@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" 
+            fx:controller="com.colegio.views.controllers.MenuPrincipalViewController"
+            styleClass="menu-container">
+    
+    <!-- Barra superior con informaciÃ³n del usuario -->
+    <top>
+        <HBox spacing="10" styleClass="top-bar">
+            <Label text="Usuario: " />
+            <Label fx:id="labelUsuario" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button text="Cerrar SesiÃ³n" onAction="#handleCerrarSesion" 
+                    styleClass="logout-button"/>
+        </HBox>
+    </top>
+    
+    <!-- MenÃº lateral izquierdo -->
+    <left>
+        <VBox spacing="10" styleClass="side-menu">
+            <!-- Botones del menÃº - visibles segÃºn el rol -->
+            <Button text="GestiÃ³n de Trabajadores" 
+                    onAction="#mostrarGestionTrabajadores" 
+                    fx:id="btnGestionTrabajadores"/>
+            
+            <Button text="GestiÃ³n de AlÃ­cuotas" 
+                    onAction="#mostrarGestionAlicuotas" 
+                    fx:id="btnGestionAlicuotas"/>
+            
+            <Button text="Generar Recibo" 
+                    onAction="#mostrarGenerarRecibo" 
+                    fx:id="btnGenerarRecibo"/>
+            
+            <Button text="GestiÃ³n de Usuarios" 
+                    onAction="#mostrarGestionUsuarios" 
+                    fx:id="btnGestionUsuarios"/>
+        </VBox>
+    </left>
+    
+    <!-- Contenido principal - cambiarÃ¡ segÃºn la opciÃ³n seleccionada -->
+    <center>
+        <StackPane fx:id="contenidoPrincipal">
+            <Label text="Seleccione una opciÃ³n del menÃº" 
+                   styleClass="welcome-label"/>
+        </StackPane>
+    </center>
+</BorderPane>

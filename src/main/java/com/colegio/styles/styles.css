@@ -1,0 +1,26 @@
+.login-container {
+    -fx-padding: 20;
+    -fx-background-color: #f5f5f5;
+}
+
+.title-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 20 0;
+}
+
+.login-button {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+    -fx-padding: 10 20;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: #1976D2;
+}
+
+.error-label {
+    -fx-text-fill: #D32F2F;
+    -fx-font-size: 12px;
+}

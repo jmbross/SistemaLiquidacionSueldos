@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.colegio.views.controllers.LoginViewController"
+      spacing="10" alignment="CENTER" styleClass="login-container">
+    
+    <!-- TÃ­tulo de la ventana de login -->
+    <Label text="Sistema de LiquidaciÃ³n de Sueldos" styleClass="title-label"/>
+    
+    <!-- Campo para el DNI -->
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="DNI:" />
+        <TextField fx:id="dniField" promptText="Ingrese su DNI"/>
+    </HBox>
+    
+    <!-- Campo para la contraseÃ±a -->
+    <HBox spacing="10" alignment="CENTER">
+        <Label text="ContraseÃ±a:" />
+        <PasswordField fx:id="passwordField" promptText="Ingrese su contraseÃ±a"/>
+    </HBox>
+    
+    <!-- BotÃ³n de inicio de sesiÃ³n -->
+    <Button text="Iniciar SesiÃ³n" onAction="#handleLogin" styleClass="login-button"/>
+    
+    <!-- Etiqueta para mostrar mensajes de error -->
+    <Label fx:id="mensajeError" styleClass="error-label" visible="false"/>
+</VBox>

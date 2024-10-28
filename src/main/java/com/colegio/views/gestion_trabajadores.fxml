@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.colegio.controllers.GestionTrabajadoresController"
+      spacing="10" padding="15">
+    
+    <!-- TÃ­tulo -->
+    <HBox alignment="CENTER">
+        <Label text="GestiÃ³n de Trabajadores" styleClass="title-label"/>
+    </HBox>
+    
+    <!-- Botones de acciÃ³n -->
+    <HBox spacing="10">
+        <Button text="Nuevo Trabajador" onAction="#mostrarFormularioNuevo"/>
+        <Button text="Editar" onAction="#editarTrabajador" fx:id="btnEditar"/>
+        <Button text="Eliminar" onAction="#eliminarTrabajador" fx:id="btnEliminar"/>
+        <TextField fx:id="txtBuscar" promptText="Buscar por nombre o DNI"/>
+        <Button text="Buscar" onAction="#buscarTrabajador"/>
+    </HBox>
+    
+    <!-- Tabla de trabajadores -->
+    <TableView fx:id="tablaTrabajadores" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId" text="ID"/>
+            <TableColumn fx:id="colNombre" text="Nombre"/>
+            <TableColumn fx:id="colApellido" text="Apellido"/>
+            <TableColumn fx:id="colDni" text="DNI"/>
+            <TableColumn fx:id="colEmail" text="Email"/>
+            <TableColumn fx:id="colSueldoBruto" text="Sueldo Bruto"/>
+        </columns>
+    </TableView>
+    
+    <!-- Formulario de trabajador (inicialmente oculto) -->
+    <VBox fx:id="formularioTrabajador" visible="false" spacing="10">
+        <Label text="Datos del Trabajador" styleClass="subtitle-label"/>
+        
+        <GridPane hgap="10" vgap="10">
+            <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField fx:id="txtNombre" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+            
+            <Label text="Apellido:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextField fx:id="txtApellido" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            
+            <Label text="DNI:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+            <TextField fx:id="txtDni" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            
+            <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            
+            <Label text="Sueldo Bruto:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+            <TextField fx:id="txtSueldoBruto" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            
+            <HBox spacing="10" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                <Button text="Guardar" onAction="#guardarTrabajador"/>
+                <Button text="Cancelar" onAction="#cancelarEdicion"/>
+            </HBox>
+        </GridPane>
+    </VBox>
+</VBox>
