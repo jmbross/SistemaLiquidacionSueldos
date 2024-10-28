@@ -7,7 +7,7 @@
             fx:controller="com.colegio.views.controllers.MenuPrincipalViewController"
             styleClass="menu-container">
     
-    <!-- Barra superior con informaciÃ³n del usuario -->
+    <!-- Barra superior con informacion del usuario -->
     <top>
         <HBox spacing="10" styleClass="top-bar">
             <Label text="Usuario: " />
@@ -18,10 +18,10 @@
         </HBox>
     </top>
     
-    <!-- MenÃº lateral izquierdo -->
+    <!-- Menu lateral izquierdo -->
     <left>
         <VBox spacing="10" styleClass="side-menu">
-            <!-- Botones del menÃº - visibles segÃºn el rol -->
+            <!-- Botones del menu - visibles segun el rol -->
             <Button text="GestiÃ³n de Trabajadores" 
                     onAction="#mostrarGestionTrabajadores" 
                     fx:id="btnGestionTrabajadores"/>
@@ -40,7 +40,7 @@
         </VBox>
     </left>
     
-    <!-- Contenido principal - cambiarÃ¡ segÃºn la opciÃ³n seleccionada -->
+    <!-- Contenido principal - cambiara segun la opcion seleccionada -->
     <center>
         <StackPane fx:id="contenidoPrincipal">
             <Label text="Seleccione una opciÃ³n del menÃº" 

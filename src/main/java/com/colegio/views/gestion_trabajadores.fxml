@@ -7,12 +7,12 @@
       fx:controller="com.colegio.controllers.GestionTrabajadoresController"
       spacing="10" padding="15">
     
-    <!-- TÃ­tulo -->
+    <!-- Titulo -->
     <HBox alignment="CENTER">
         <Label text="GestiÃ³n de Trabajadores" styleClass="title-label"/>
     </HBox>
     
-    <!-- Botones de acciÃ³n -->
+    <!-- Botones de accion -->
     <HBox spacing="10">
         <Button text="Nuevo Trabajador" onAction="#mostrarFormularioNuevo"/>
         <Button text="Editar" onAction="#editarTrabajador" fx:id="btnEditar"/>

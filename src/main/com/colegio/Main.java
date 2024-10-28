@@ -6,7 +6,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-public class MainApplication extends Application {
+public class Main extends Application {
     
     @Override
     public void start(Stage primaryStage) {
@@ -20,7 +20,7 @@ public class MainApplication extends Application {
             scene.getStylesheets().add(getClass().getResource("/com/colegio/styles/styles.css").toExternalForm());
             
             // Configura la ventana principal
-            primaryStage.setTitle("Sistema de LiquidaciÃ³n de Sueldos - Login");
+            primaryStage.setTitle("Sistema de Liquidacion de Sueldos - Login");
             primaryStage.setScene(scene);
             primaryStage.show();
             

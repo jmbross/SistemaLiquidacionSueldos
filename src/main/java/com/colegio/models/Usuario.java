@@ -10,7 +10,7 @@ public class Usuario {
     private String contrasena;
     private Rol rol;
 
-    // Constructor vacÃ­o
+    // Constructor vacio
     public Usuario() {}
 
     // Constructor completo
